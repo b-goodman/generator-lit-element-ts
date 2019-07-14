@@ -29,7 +29,7 @@ export class <%= componentNameAsClass %> extends LitElement {
     }
 
     render () {
-        return CssImport.template;
+        return <%= componentNameAsClass %>.template;
     }
 }
 

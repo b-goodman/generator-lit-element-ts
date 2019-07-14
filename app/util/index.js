@@ -16,9 +16,9 @@ const getClassName = (componentName) => {
  */
 const templateToDestTuples = [
     ["src/index.ts.template", "src/index.ts"],
-    ["src/styles.css"],
+    ["src/style.css"],
     ["src/template.html"],
-    ["src/typings.d.ts"]
+    ["src/typings.d.ts"],
     [".gitignore"],
     ["index.html"],
     ["package.json.template", "package.json"],
