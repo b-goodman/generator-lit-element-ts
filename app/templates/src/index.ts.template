@@ -1,0 +1,35 @@
+import { LitElement, html, css, customElement, property } from "lit-element";
+
+import style from "./style.css";
+import template from "./template.html";
+
+@customElement("<%= componentName %>")
+export class <%= componentNameAsClass %> extends LitElement {
+
+    static get styles() {
+        const stringArray = [`${style.cssText}`] as any;
+        stringArray.raw = [`${style.cssText}`];
+        return [
+            css(stringArray as TemplateStringsArray),
+        ];
+    }
+
+    static get template () {
+        const stringArray = [`${template}`] as any;
+        stringArray.raw = [`${template}`];
+        return html(stringArray as TemplateStringsArray);
+    }
+
+    @property({ type: String })
+    public label = "";
+
+
+    constructor () {
+        super();
+    }
+
+    render () {
+        return CssImport.template;
+    }
+}
+
