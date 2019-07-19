@@ -4,6 +4,7 @@ import includePaths from "rollup-plugin-includepaths";
 import resolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import typescript from "rollup-plugin-typescript2";
+import cjs from "rollup-plugin-cjs-es";
 
 export default {
 	input: ["./src/index.ts"],
@@ -20,7 +21,14 @@ export default {
 		}
 	],
 	plugins: [
-		typescript(),
+		typescript({
+			typescript: require("typescript"),
+            objectHashIgnoreUnknownHack: true,
+		}),
+		cjs({
+			nested: true,
+			exclude: [ "**/*.css", "**/*.html",  ],
+		}),
 		includePaths({
 			paths: ["src", "dist"],
 			extensions: [".css", ".html"],
