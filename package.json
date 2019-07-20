@@ -1,6 +1,6 @@
 {
   "name": "generator-lit-element-ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Start a new custom element using LitElement.",
   "author": {
     "name": "Ben Goodman",
