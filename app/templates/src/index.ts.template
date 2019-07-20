@@ -1,16 +1,14 @@
 import { LitElement, html, css, customElement, property } from "lit-element";
 
-import style from "./style.css";
+import style from "./style.scss";
 import template from "./template.html";
 
 @customElement("<%= componentName %>")
 export class <%= componentNameAsClass %> extends LitElement {
 
     static get styles() {
-        const stringArray = [`${style.cssText}`] as any;
-        stringArray.raw = [`${style.cssText}`];
         return [
-            css(stringArray as TemplateStringsArray),
+            style({ css })
         ];
     }
 

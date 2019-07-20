@@ -16,6 +16,7 @@
     "lit-element",
     "web-component",
     "typescript",
+    "scss",
     "yeoman-generator"
   ],
   "scripts": {

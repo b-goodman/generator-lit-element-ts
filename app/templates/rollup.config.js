@@ -1,4 +1,4 @@
-import litcss from "rollup-plugin-lit-css";
+import litSass from '@ponday/rollup-plugin-lit-sass';
 import html from "rollup-plugin-html";
 import includePaths from "rollup-plugin-includepaths";
 import resolve from "rollup-plugin-node-resolve";
@@ -33,7 +33,7 @@ export default {
 			paths: ["src", "dist"],
 			extensions: [".css", ".html"],
 		}),
-		litcss(),
+		litSass(),
 		html({
 			include: '**/*.html'
 		}),
