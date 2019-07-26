@@ -13,7 +13,7 @@ export default configs.map(config => ({
         ...config.plugins,
         cjs({
 			nested: true,
-			exclude: [ "**/*.css", "**/*.html",  ],
+			exclude: [ "**/*.css", "**/*.scss", "**/*.html",  ],
 		}),
         litSass()
     ],

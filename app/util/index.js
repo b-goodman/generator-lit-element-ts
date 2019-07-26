@@ -16,14 +16,15 @@ const getClassName = (componentName) => {
  */
 const templateToDestTuples = [
     ["src/index.ts.template", "src/index.ts"],
-    ["src/style.css"],
+    ["src/style.scss"],
     ["src/template.html"],
-    ["src/typings.d.ts"],
+    ["src/typings.d.ts.template", "src/typings.d.ts"],
     [".gitignore"],
     ["index.html"],
     ["package.json.template", "package.json"],
     ["README.md"],
     ["rollup.config.js"],
+    [".babelrc"],
     ["tsconfig.json.template", "tsconfig.json"],
 ];
 
