@@ -7,6 +7,6 @@
   "moduleResolution": "node",
   "lib": ["es2017", "dom", "es2019.array"],
   "experimentalDecorators": true,
-  "allowSyntheticDefaultImports": true,
+  "allowSyntheticDefaultImports": true
   }
 }
