@@ -1,5 +1,12 @@
 # generator-lit-element-ts
 
+Quickly prototype and publish webcomponents using the LitElement library.
+
++ Full Typescript support including decorators.
++ Option to include external html/scss files as static properties.
++ es module build with pollyfill fallback supporting legacy specs.
++ Basic dev server (no live reload)
+
 ## Install
 
 [Yeoman](https://yeoman.io/) is a pre-requisite so make sure its installed first.
@@ -48,11 +55,7 @@ Name is verified using [validate-element-name](https://www.npmjs.com/package/val
 >> Custom element names must contain a hyphen. Example: unicorn-cake
 ```
 
-## What You Get:
-
-+ External html/css files loaded in as static properties.
-+ es module build with cjs fallback.
-+ Basic dev server (no live reload)
+## What You Get
 
 ### Template
 
@@ -60,22 +63,23 @@ Name is verified using [validate-element-name](https://www.npmjs.com/package/val
 .
 ├── README.md
 ├── index.html
-├── package.json.template
+├── package.json
 ├── rollup.config.js
 ├── src
-│   ├── index.ts.template
-│   ├── style.css
+│   ├── img
+│   ├── index.ts
+│   ├── style.scss
 │   ├── template.html
 │   └── typings.d.ts
-└── tsconfig.json.template
+└── tsconfig.json
 ```
 
 ### Scripts
 
 ```json
   "scripts": {
-    "build": "./node_modules/.bin/rollup -c rollup.config.js",
-    "serve": "./node_modules/.bin/serve",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "serve": "./node_modules/.bin/es-dev-server --root-dir ./dist --open",
     "start": "run-s build serve"
   }
 ```
