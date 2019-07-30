@@ -1,10 +1,14 @@
 {
   "name": "generator-lit-element-ts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Start a new custom element using LitElement.",
   "author": {
     "name": "Ben Goodman",
     "email": "b@thebgoodman.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b-goodman/generator-lit-element-ts"
   },
   "main": "generators/index.js",
   "files": [
